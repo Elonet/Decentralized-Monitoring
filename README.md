@@ -6,17 +6,17 @@
    </li>
 </ul>
 <h2>Requirements</h2>
-<h3>Mandatory requirements</h3>
+<h5>Mandatory requirements</h5>
 <ul>
    <li>Web server</li>
 </ul>
-<h3>Optional requirements</h3>
+<h5>Optional requirements</h5>
 <ul>
    <li>Screen for the logstalgia server video</li>
 </ul>
 
 <h2>Browsers</h2>
-<h3>Desktop browsers</h3>
+<h5>Desktop browsers</h5>
 <p>The Browser plugin is regularly tested with the latest browser versions and supports the following minimal versions:</p>
 <ul>
    <li>Google Chrome</li>
