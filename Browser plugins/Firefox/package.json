@@ -1,0 +1,22 @@
+{
+    "license": "MPL 2.0", 
+    "description": "Software to allow monitoring from running clients.", 
+    "engines": {
+        "firefox": ">=35"
+    }, 
+    "author": "Elonet", 
+    "title": "Decentralized Monitoring", 
+    "version": "1.2.5", 
+    "icons": "Decmon-16.png", 
+    "permissions": {
+        "cross-domain-content": [
+            "http://192.168.5.106/*",
+            "https://www.google.fr/*",
+        ]
+    }, 
+    "main": "./index.js", 
+    "homepage": "https://www.elonet.fr", 
+    "id": "jid1-hxqVPbGkAGwx3g", 
+    "icon64": "Decmon-64.png", 
+    "name": "decentralized_monitoring"
+}
