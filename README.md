@@ -29,7 +29,7 @@
 
 <h2>Contributing</h2>
 <p><strong>Bug fixes</strong> and <strong>new features</strong> can be proposed using <a href="https://github.com/Elonet/Decentralized-Monitoring/pulls">pull requests</a>.
-   Please read the <a href="https://github.com/Elonet/Decentralized-Monitoring/CONTRIBUTING.md">contribution guidelines</a> before submitting a pull request.
+   Please read the <a href="https://github.com/Elonet/Decentralized-Monitoring/blob/master/CONTRIBUTING.md">contribution guidelines</a> before submitting a pull request.
 </p>
 <h2>Support</h2>
 <p>This project is actively maintained, but there is no official support channel.<br>
