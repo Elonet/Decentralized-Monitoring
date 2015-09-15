@@ -8,11 +8,15 @@
 <h2>Requirements</h2>
 <h5>Mandatory requirements</h5>
 <ul>
-   <li>Web server</li>
+   <li>Web server (Debian, CentOs, Ubuntu)</li>
+   <li>Database (SQL)</li>
+   <li>Logstalgia server (Ubuntu)</li>
 </ul>
+<p>L'ensemble de la solution peut être également installé sur le même serveur, dans ce cas le serveur doit obligatoirement être sous Ubuntu.</p>
 <h5>Optional requirements</h5>
 <ul>
    <li>Screen for the logstalgia server video</li>
+   <li>VNC server for the screensaver</li>
 </ul>
 
 <h2>Browsers</h2>
