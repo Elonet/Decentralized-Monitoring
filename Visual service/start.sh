@@ -1,6 +1,7 @@
 ll=`which logstalgia`
 if [ "${ll}" != "" ];then
-	tail -f /var/www/decmon/tmp/logstalgia.txt | logstalgia &
+tail -f **MOD1** /var/www/decmon/tmp/logstalgia.txt **MOD1** | logstalgia &
+#screen -d -m -S 'logstalgia' bash -c 'ssh -i /home/elonet/.ssh/id_rsa.pub decmonjulien@elonet.fr tail -f /var/www/dev.elonet.fr/testdecmon/decmon/tmp/logstalgia.txt | logstalgia'
 else
 	echo "Please install logstalgia."
 fi
@@ -23,10 +24,9 @@ posCh=`echo ${posX}+${widthLog}+13 | bc`
 wmctrl -r "Logstalgia" -e 0,${posX},${posY},${widthLog},${height}
 ch=`which chromium-browser`
 if [ "${ch}" != "" ];then
-	chromium-browser --app=http://192.168.5.112/decmon/ &
+	chromium-browser --app=http://dev.elonet.fr/testdecmon/decmon/ &
 else
 	echo "Please install chromium."
 fi
 sleep 2
 wmctrl -r "Decentralized Monitoring" -e 0,${posCh},${posY},${widthCh},${height}
-
