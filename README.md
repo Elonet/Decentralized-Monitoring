@@ -7,13 +7,11 @@
    <li>indisponibilité HTTP/S ponctuelle ou durable (waiting time socket TCP du GET HTTP/S ou temps d'attente du GET HTTP/S)</li>
    <li>non présence d'une chaîne de caractères par check ASCII sur GET HTTP/HTTPS sur url complète disponibles sans inputs (only GET, pas de POST ou authentification/cookie etc)</li>
 </ul>
-<br/>
 <p>L'aperçu temps réel est fournie de deux manières :</p>
 <ul>
    <li>Les alertes email sur événement</li>
    <li>L'écran de visuel sur événement</li>
 </ul>
-<br/>
 <p>On redirige comme avec un proxy, les requêtes de supervision via ces PC à partir du moment où ils ont l'application Chrome ou l'extension firefox, permettant de lancer en background des checks. Les PC deviennent alors des capteurs de surveillance.</p>
 <h2>Requirements</h2>
 <h5>Mandatory requirements</h5>
