@@ -9,7 +9,7 @@
  * http://www.gnu.org/licenses/gpl-3.0.en.html
  */
 /* You must change this url, with your get-conf.php url */
-var master_url = "http://dev.elonet.fr/testdecmon/decmon/php/get-conf.php";
+var master_url = "http://your-server.com/php/get-conf.php";
 
 var self = require("sdk/self"),
 	data = self.data,
