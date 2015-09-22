@@ -11,6 +11,9 @@
 /* You must change this url, with your get-conf.php url */
 var master_url = "http://your-server.com/php/get-conf.php";
 
+/*
+ * TO FIX Changing compiler cfx jpm leading to errors in code
+ */
 var self = require("sdk/self"),
 	data = self.data,
 	buttons = require('sdk/ui/button/action'),
