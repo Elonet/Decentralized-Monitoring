@@ -624,8 +624,7 @@ $yellow = $orange/2;
 						});
 						
 						/*
-						 * a décommenter lorsque le calcul de longueur
-						 * vidéo logstalgia sera opérationel
+						 * 	TO FIX
 						 */
 						/*
 						$('#next').click(function(){
@@ -635,8 +634,7 @@ $yellow = $orange/2;
 						});
 						*/
 						/*
-						 * a décommenter lorsque le calcul de longueur
-						 * vidéo logstalgia sera opérationel
+						 * TO FIX
 						 */
 						//$('#submit').click(function(){
 						$('#next').click(function(){
@@ -649,8 +647,7 @@ $yellow = $orange/2;
 							}
 							
 							/*
-							* a décommenter lorsque le calcul de longueur
-							* vidéo logstalgia sera opérationel
+							* TO FIX
 							*/
 							/*
 							var video_length = "";
@@ -671,8 +668,7 @@ $yellow = $orange/2;
 							video_length = 'full';
 							
 							/*
-							* a décommenter lorsque le calcul de longueur
-							* vidéo logstalgia sera opérationel
+							* TO FIX
 							*/
 							//$('#video_length').fadeOut(function(){
 							$('#video_quality').fadeOut(function(){

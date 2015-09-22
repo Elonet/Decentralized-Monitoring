@@ -1,3 +1,16 @@
+<!--
+/*
+ * Decentralized Monitoring source code
+ * https://github.com/Elonet/Decentralized-Monitoring
+ *
+ * Copyright 2015, Leo Leroy
+ * https://elonet.fr/
+ *
+ * Licensed under the GPLv3 license:
+ * http://www.gnu.org/licenses/gpl-3.0.en.html
+ */ 
+ -->
+
 <?php
 date_default_timezone_set('Europe/Berlin');
 header("Access-Control-Allow-Origin:*");
@@ -12,7 +25,7 @@ $server_log_lostagia = trim(htmlspecialchars($_POST['loglog']));
 $server_root = "/var/www/";
 
 
-//On commence par calculé la taille de l'image que l'utilisateur souhaite
+//We begin by calculating the size of the image that the user wants
 if( $quality == 'ld'){
 	$width = 800;
 	$height = 480;
@@ -22,7 +35,7 @@ else if( $quality == 'hd' ){
 	$height = 720;
 }
 
-//Puis on calcul la vitesse que doit avoir la video
+//Then we calculate the speed that must have the video
 $tps_video = $fin - $debut;
 
 if( $length == 'full' ){
@@ -43,7 +56,7 @@ error_log($tps_video."=".date("i:s",$tps_video)." ".$speed,0);
 $debut_date = date('Y-m-d H:i:s',intval($debut));
 $fin_date = date('Y-m-d H:i:s',intval($fin));
 
-//On échappe les caractères non souhaitable avant d'éxécuter le script bash
+//It escapes the undesirable characters before execute the bash script
 $debut_date = escapeshellarg($debut_date);
 $fin_date = escapeshellarg($fin_date);
 $height = escapeshellarg($height);
@@ -56,6 +69,9 @@ if( !@file_exists($server_root.'LogVideoServer/videos/logstalgia'.strtotime($deb
 		sleep(1);
 	}
 	file_put_contents($server_root."LogVideoServer/request.lock",$debut_date.";".$fin_date.";".$height.";".$width.";".$speed.";".$server_root.";".$server_log_lostagia);
+	/*
+	 *	TO FIX
+	 */
 	//shell_exec('./video.sh '.$debut_date.' '.$fin_date.' '.$width.' '.$height.' '.$speed);
 }
 

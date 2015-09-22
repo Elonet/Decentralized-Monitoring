@@ -52,23 +52,22 @@ then
         
         loglogstalgia_path=`cut -d";" -f 7 /var/www/LogVideoServer/request.lock`
         
-	 #a docmmenter après debug
 	rm /var/www/LogVideoServer/request.lock
         
         echo "Debut test;" >> /var/www/LogVideoServer/videos/video.log
-	#script qui record logstalgia en cas d'erreur
+	#logstalgia script that logs on error
 	wget  -O "${root_log_serv}LogVideoServer/cron/logstalgia.txt" --user=ninja --password=A1Z2E3R4T5 "${loglogstalgia_path}"
 	echo "Dl log ok;" >> /var/www/LogVideoServer/videos/video.log
 	
 	export LD_LIBRARY_PATH=/usr/lib/
 	
 	
-	#logstalgia calcul la video en fonction du debut et de la fin, de la taille ( width et heigth ) et de la vitesse demandé
+	#logstalgia calculating the video based on the beginning and the end , the size (width and heigth ) and speed required
 	strace -o /var/www/LogVideoServer/videos/logstalgia.error /usr/local/bin/logstalgia  --from "${from}" --to "${to}" -"${width}"x"${height}" -s "${speed}" --output-ppm-stream "${root_log_serv}"LogVideoServer/cron/logstalgia.ppm "${root_log_serv}"LogVideoServer/cron/logstalgia.txt 2>&1 >> ${root_log_serv}LogVideoServer/videos/video.log
 	if [ -e /var/www/LogVideoServer/cron/logstalgia.ppm ];then
 		echo "Command logstalgia ok" >> /var/www/LogVideoServer/videos/video.log
 	fi
-	# converti la video en format ppm vers du mp4
+	#in ppm converted video format to mp4
 	
         ff=`which ffmpeg`
         if [ "${ff}" != "" ];then
@@ -88,18 +87,18 @@ then
 	
 	#echo `date -d "${from}" +%s` >> /var/www/LogVideoServer/videos/video.log
 	tmsp_debut=`date -d "${from}" +%s`
-	# on déplace la video finale vers /var/www/LogVideoServer/videos/
+	#the final video is moved to /var/www/LogVideoServer/videos/
 	echo ${tmps_debut} >> /var/www/LogVideoServer/videos/video.log
 	mv ${root_log_serv}LogVideoServer/cron/logstalgia.mp4 ${root_log_serv}LogVideoServer/videos/logstalgia${tmsp_debut}.mp4 >> /var/www/LogVideoServer/videos/video.log
 	
 	if [ -e /var/www/LogVideoServer/videos/logstalgia${tmsp_debut}.mp4 ]
 	then
-		echo "Deplacement logstalgia.mp4 en logstalgia${tmsp_debut}.mp4" >> /var/www/LogVideoServer/videos/video.log
+		echo "Moving logstalgia.mp4 en logstalgia${tmsp_debut}.mp4" >> /var/www/LogVideoServer/videos/video.log
 	else
-		echo "Echec Deplacement" >> /var/www/LogVideoServer/videos/video.log
+		echo "Bad Moving" >> /var/www/LogVideoServer/videos/video.log
 	fi
 	
-	#suppression du fichier video temporaire ppm
+	#deleting temporary video file ppm
 	rm ${root_log_serv}LogVideoServer/cron/logstalgia.ppm
 	rm ${root_log_serv}LogVideoServer/cron/logstalgia.txt
 	echo "Suppression des fichiers ok" >> /var/www/LogVideoServer/videos/video.log
