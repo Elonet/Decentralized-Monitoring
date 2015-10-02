@@ -1,18 +1,6 @@
 <h1>Decentralized Monitoring</h1>
-<h2>Target</h2>
-<p>Utiliser les PC du réseau, utilisant une application chrome ou une extension firefox , comme noeud de supervision du réseau, et fournir un aperçu temps réel de ces problématiques :</p>
-<ul>
-   <li>temps de réponses et d'accès à des services TCP ou HTTP/HTTPS anormalement long</li>
-   <li>indisponibilité TCP ponctuelle ou durable.</li>
-   <li>indisponibilité HTTP/S ponctuelle ou durable (waiting time socket TCP du GET HTTP/S ou temps d'attente du GET HTTP/S)</li>
-   <li>non présence d'une chaîne de caractères par check ASCII sur GET HTTP/HTTPS sur url complète disponibles sans inputs (only GET, pas de POST ou authentification/cookie etc)</li>
-</ul>
-<p>L'aperçu temps réel est fournie de deux manières :</p>
-<ul>
-   <li>Les alertes email sur événement</li>
-   <li>L'écran de visuel sur événement</li>
-</ul>
-<p>On redirige comme avec un proxy, les requêtes de supervision via ces PC à partir du moment où ils ont l'application Chrome ou l'extension firefox, permettant de lancer en background des checks. Les PC deviennent alors des capteurs de surveillance.</p>
+<h2>Documentation</h2>
+<a href="https://elonet.fr/tech/doku.php?id=installation_web_server" target="_blank">General and setup documentation</a>
 <h2>Requirements</h2>
 <h5>Mandatory requirements</h5>
 <ul>
@@ -20,7 +8,7 @@
    <li>Database (SQL)</li>
    <li>Logstalgia server (Ubuntu)</li>
 </ul>
-<p>L'ensemble de la solution peut être également installé sur le même serveur, dans ce cas le serveur doit obligatoirement être sous Ubuntu.</p>
+<p>The whole solution can also be installed on the same server, in this case the server must be Ubuntu .</p>
 <h5>Optional requirements</h5>
 <ul>
    <li>Screen for the logstalgia server video</li>
