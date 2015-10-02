@@ -1,6 +1,6 @@
 <h1>Decentralized Monitoring</h1>
 <h2>Documentation</h2>
-<a href="https://elonet.fr/tech/doku.php?id=installation_web_server" target="_blank">General and setup documentation</a>
+<a href="https://elonet.fr/tech/doku.php/open-source_solutions/decentralized_monitoring" target="_blank">General and setup documentation</a>
 <h2>Contributing</h2>
 <p><strong>Bug fixes</strong> and <strong>new features</strong> can be proposed using <a href="https://github.com/Elonet/Decentralized-Monitoring/pulls" target="_blank">pull requests</a>.
    Please read the <a href="https://github.com/Elonet/Decentralized-Monitoring/blob/master/CONTRIBUTING.md" target="_blank">contribution guidelines</a> before submitting a pull request.
