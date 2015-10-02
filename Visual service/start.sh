@@ -1,7 +1,7 @@
 ll=`which logstalgia`
 if [ "${ll}" != "" ];then
-tail -f **MOD1** /var/www/decmon/tmp/logstalgia.txt **MOD1** | logstalgia &
-#screen -d -m -S 'logstalgia' bash -c 'ssh -i /home/elonet/.ssh/id_rsa.pub decmonjulien@elonet.fr tail -f /var/www/dev.elonet.fr/testdecmon/decmon/tmp/logstalgia.txt | logstalgia'
+tail -f [PATH_OF_LOGSTALGIA.TXT_ON_CORRELATION_SERVER] | logstalgia & 
+#screen -d -m -S 'logstalgia' bash -c 'ssh -i [PATH_OF_PRIVATE_SSH_KEY] [USER_SERVER_CORRELATION]@[HOSTNAME_SERVER_CORRELATION] tail -f [PATH_OF_LOGSTALGIA.TXT_ON_CORRELATION_SERVER] | logstalgia'
 else
 	echo "Please install logstalgia."
 fi
