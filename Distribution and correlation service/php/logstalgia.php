@@ -62,9 +62,6 @@ else
 	}
 }
 $output = implode("|",$item);
-if(rand(5,15) == 10){
-$output .= time($checktimestamp + 10)."|Network 10.0.0.0/24|server6.paris.dns|Fail|65536|".$test."|FF0000\n";
-}
 file_put_contents("../tmp/logstalgia.txt",$output,FILE_APPEND);
 file_put_contents("../tmp/result.txt",json_encode($result));
 
